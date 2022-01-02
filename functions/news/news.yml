@@ -1,0 +1,6 @@
+search:
+  handler: functions/news/handler.hello
+  events:
+    - httpApi:
+        path: /
+        method: get

@@ -1,0 +1,19 @@
+org: royberapps
+app: aws-news-service
+service: aws-news-service
+
+frameworkVersion: '2 || 3'
+
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+plugins:
+  - serverless-offline
+
+functions:
+  - ${file(./functions/news/news.yml)}
+  
+      
