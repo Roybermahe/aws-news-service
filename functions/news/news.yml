@@ -1,6 +1,20 @@
-search:
-  handler: functions/news/handler.hello
+getNews:
+  handler: functions/news/handler.getNews
   events:
     - httpApi:
-        path: /
+        path: /news
+        method: get
+
+getBySource: 
+  handler: functions/news/handler.getOneBySource
+  events:
+    - httpApi:
+        path: /news/{source}
+        method: get
+
+getByMentions: 
+  handler: functions/news/handler.getOneByMentions
+  events:
+    - httpApi:
+        path: /news/mentions
         method: get
